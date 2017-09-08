@@ -1,4 +1,11 @@
-// 함수를 만드는 틀
+/*
+* HOME       : www.codelec.co.kr
+* COURSENAME : C++ Template Programming
+* Copyright (C) 2017 CODENURI Inc. All rights reserved.
+*/
+
+// cl square.cpp /FAs
+// g++ square.cpp -S
 
 template<typename T>
 T square(T a)
