@@ -1,6 +1,10 @@
-// lib.h
-// 함수의 선언부 제공.
+/*
+* HOME       : www.codelec.co.kr
+* COURSENAME : C++ Template Programming
+* Copyright (C) 2017 CODENURI Inc. All rights reserved.
+*/
 
+// lib.h
 void foo(int);
 
 template<typename T>
