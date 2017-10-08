@@ -7,7 +7,7 @@
 */
 
 // 1. type
-// 2. °ª( non-type)
+// 2. ( non-type)
 // 3. template 
 
 template<typename T, int N> struct Stack
