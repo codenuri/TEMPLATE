@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Step 1.  가변인자 
+// Step 1.  가변인자 템플릿
 template<typename ... Types> struct xtuple
 {
 	static constexpr int N = 0;
@@ -15,3 +15,4 @@ int main()
 	xtuple<int, char, double> t3;
 
 }
+ 
