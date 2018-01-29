@@ -6,7 +6,7 @@
 * Copyright (C) 2017 CODENURI Inc. All rights reserved.
 */
 
-// ½ÇÁ¦ allocator ¼Ò½º´Â user_define_allocator.cpp ¼Ò½º¸¦ Âü°í ÇÏ¼¼¿ä.
+// ì‹¤ì œ allocator ì†ŒìŠ¤ëŠ” user_define_allocator.cpp ì†ŒìŠ¤ë¥¼ ì°¸ê³  í•˜ì„¸ìš”.
 template<typename T> class allocator
 {
 public:
@@ -16,7 +16,7 @@ public:
 	// 
 	template<typename U> struct rebind
 	{
-		typename allocator<U> other;
+		typedef allocator<U> other;
 	};
 };
 // rebind
