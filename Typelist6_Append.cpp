@@ -39,7 +39,7 @@ template<typename Head, typename Tail> struct Append<NullType, Typelist<Head, Ta
 
 
 // 4. Typelist<Head, Tail>, NullType  => Typelist<Head, Tail>
-//      
+//    이번 단계의 코드는 없어도 됩니다. 5단계의 코드만 있으면 됩니다.
 template<typename Head, typename Tail> struct Append<Typelist<Head, Tail>, NullType >
 {
 	typedef Typelist<Head, Tail> type;
