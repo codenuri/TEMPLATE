@@ -13,7 +13,7 @@ struct NullType {};
 #define TYPELIST_3(T1, T2, T3)		Typelist<T1, Typelist<T2, Typelist<T3, NullType>>>
 #define TYPELIST_4(T1, T2, T3, T4)	Typelist<T1, Typelist<T2, Typelist<T3, Typelist<T4, NullType>>>>
 //-------------------------------------------------------------------------------------------
-// Typelist ³¡¿¡ Å¸ÀÔ Ãß°¡ÇÏ±â.
+// Typelist ëì— íƒ€ì… ì¶”ê°€í•˜ê¸°.
 
 template<typename TL, typename T> struct Append;
 
@@ -25,7 +25,7 @@ template<> struct Append<NullType, NullType>
 	typedef NullType type;
 };
 
-// 2. NullType, ÀÓÀÇÀÇÅ¸ÀÔ   => Typelist<ÀÓÀÇÀÇÅ¸ÀÔ, NullType>
+// 2. NullType, ì„ì˜ì˜íƒ€ì…   => Typelist<ì„ì˜ì˜íƒ€ì…, NullType>
 template<typename T> struct Append<NullType, T>
 {
 	typedef Typelist<T, NullType> type;
@@ -37,7 +37,9 @@ template<typename Head, typename Tail> struct Append<NullType, Typelist<Head, Ta
 	typedef Typelist<Head, Tail> type;
 };
 
+
 // 4. Typelist<Head, Tail>, NullType  => Typelist<Head, Tail>
+//      
 template<typename Head, typename Tail> struct Append<Typelist<Head, Tail>, NullType >
 {
 	typedef Typelist<Head, Tail> type;
